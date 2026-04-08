@@ -1,0 +1,116 @@
+/* Tag CSS */
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    justify-items: center;
+    background: url(Assets/Images/Background-Color.jpg);
+    height: 100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-family:Verdana;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 30px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size:larger;
+}
+
+/* Id CSS */
+#tasks {
+    cursor: pointer;
+    font-size: 25px;
+    list-style:decimal;
+    display:grid;
+    grid-template-columns: auto auto auto ;
+    column-gap: 150px ;
+    row-gap: 10px ;
+}
+
+/* Class CSS */
+.container {
+    place-items: center;
+    height: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    width: 75%;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 30px;
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    border: 0.1px solid #ffffff1a;
+}
+
+.container input {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 0.1px solid #ffffff1a;
+    width: 350px;
+    height: 5px;
+    padding: 15px;
+    font-size: 1.1em;
+    color: white;
+}
+
+/* Pseudo-classes */
+input:hover{
+    border: solid 1px #ff0000;
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+/* Media Queries */
+
+/* Screen for 1000 to 1260 px */
+@media screen and ( min-width: 1000px ) and ( max-width: 1260px ) {
+
+    .container {
+        width: 80%;    
+    }
+}
+
+/* Screen for 800 to 1000 px */
+@media screen and ( min-width: 800px ) and ( max-width: 1000px ) {
+
+    .container {
+        width: 80%;    
+    }
+
+    #tasks {
+        grid-template-columns:auto auto ;
+    }
+}
+
+/* Screen for 0 to 1000 px */
+@media screen and ( max-width: 800px ) {
+
+    .container {
+        width: 80%;    
+    }
+
+    #tasks {
+        grid-template-columns:auto;
+    }
+
+    .container input {
+        width: 90%;
+    }
+}

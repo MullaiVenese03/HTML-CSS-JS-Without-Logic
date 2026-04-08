@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS";
+}
+
+body {
+    background-color: #FEF3E2;
+}
+
+.navbar {
+    color: #FEF3E2;
+    padding: 15px;
+    background-color: #708871;
+    font-size: 30px;
+}  
+
+.container {
+    background-color: #BEC6A0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.8;
+    border-radius: 20px;
+    z-index: 1;
+    display: none;
+}
+
+.container-content {
+    background-color: #BEC6A0;
+    color: #606676;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.container-content h2 {
+    color: #FEF3E2;
+}
+
+.container-content button {
+    border: none;
+    border-radius: 10px;
+    background-color: #708871;
+    color: #FEF3E2;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.overlay-box {
+    background-color: #708871;
+    color: #FEF3E2;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+    top: 30%;
+    padding: 40px;
+    border-radius: 10px;
+    position: absolute;
+    font-size: 30px;
+    z-index: 2;
+    display: none;
+}
+
+.overlay-box input {
+    border: none;
+    width: 100%;
+    color: #FEF3E2;
+    border-bottom: solid #BEC6A0 2px;
+    background-color: transparent;
+}
+
+.overlay-box input::placeholder {
+    color: #FEF3E2;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.overlay-box textarea {
+    border: solid #BEC6A0 2px;
+    width: 100%;
+    background-color: transparent;
+    height: 80px;
+    margin-top: 10px;
+    color: #FEF3E2;
+}
+
+.overlay-box textarea::placeholder {
+    color: #FEF3E2;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.overlay-box button {
+    border: none;
+    background-color: #BEC6A0;
+    color: #FEF3E2;
+    padding: 10px;
+    width: 100%;
+}
+
+.overlay-box input:focus,
+.overlay-box textarea:focus {
+    outline: none;
+}
+
+#addbox-button {
+    border: none;
+    background-color: #708871;
+    color: #FEF3E2;
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    font-size: 40px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+@media (min-width: 768px) {
+    .container-content {
+        width: 45%;
+    }
+
+    #addbox-button {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-content {
+        width: 20%;
+    }
+
+    .overlay-box {
+        width: 30%;
+        margin-left: calc(35%);
+    }
+
+    #addbox-button {
+        height: 100px;
+        width: 100px;
+    }
+}

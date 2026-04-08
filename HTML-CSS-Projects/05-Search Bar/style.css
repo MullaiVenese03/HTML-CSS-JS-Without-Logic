@@ -1,0 +1,55 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: yellow;
+    background-color: black;
+}
+
+.container {
+    justify-self: center;
+    margin-top: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Arial;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+input {
+    color: yellow;
+    width: 700px;
+    height: 40px;
+    padding: 30px;
+    border: yellow solid 0.5px;
+    border-radius: 10px 0 0 10px;
+    font-size: 20px;
+}
+
+input::placeholder {
+    color: yellow;
+    font-size: 20px;
+    opacity: 0.5;
+    font-weight: 550;
+}
+
+button {
+    color: yellow;
+    font-size: 25px;
+    width: 50px;
+    height: 40px;
+    padding: 30px;
+    border-top: yellow solid 0.5px;
+    border-left: none;
+    border-right: yellow solid 0.5px;
+    border-bottom: yellow solid 0.5px;
+    border-radius: 0 10px 10px 0;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    background-color: yellow;
+}

@@ -1,0 +1,36 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Arial;
+  font-weight: 600;
+}
+
+body {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 50px;
+  width: 50px;
+  border-top: white solid;
+  border-radius: 50px;
+  animation: Spinning infinite linear 2s;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+@keyframes Spinning {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
