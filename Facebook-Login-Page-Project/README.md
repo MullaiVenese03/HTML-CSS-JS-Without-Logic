@@ -1,32 +1,74 @@
-# Welcome to Facebook Login Page Duplicate Project!
+# Facebook Login Page (UI Clone)
 
-Welcome to our project dedicated to recreating the Facebook login page. This repository contains the source code for our personal project aimed at replicating the user experience of the Facebook login page, including the registration process.
+![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff)
 
-## About the Project
+A static UI clone of Facebook’s login page layout, focused on typography, spacing, and card-style form presentation.
 
-Our project is a faithful reproduction of the Facebook login page, allowing users to register just as they would on the actual Facebook platform. Through meticulous attention to detail, we've recreated the layout, design, and functionality of the login page to provide an authentic experience.
+## Preview
 
-Feel free to explore our project and register as you would on Facebook to see the resemblance firsthand!
+![Facebook Login Preview](Preview-Image.png)
 
-## Getting Started
+## Live Demo
 
-To get started with the project, simply clone this repository to your local machine and open the `index.html` file in your web browser. You'll be greeted with a familiar login page that closely resembles Facebook's interface.
+[Facebook Login Page](https://mullaivenese03.github.io/HTML-CSS-JS-Without-Logic/Facebook-Login-Page-Project/)
 
-```bash
-git clone https://github.com/MullaiVenese03/Facebook-Login-Page-Project.git
+## Features
+
+- **Two-column hero layout** with branding on the left and a login card on the right.
+- **Form UI** with email/phone input, password input, and primary/secondary buttons.
+- **Visual hierarchy** using spacing, shadows, and button colors similar to the original.
+- **Simple, readable CSS** built from scratch without frameworks.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+
+## Project Structure
+
+```text
+Facebook-Login-Page-Project/
+├─ index.html
+├─ facebook.css
+└─ Preview-Image.png
 ```
 
-## Usage
+## What I Learned
 
-1. Open `index.html` in your web browser to access the replicated Facebook login page.
-2. Proceed to register as you would on Facebook to experience the full functionality of our project.
-3. Feel free to explore the codebase to see how we've recreated the Facebook login page.
-[LIVE](https://mullaivenese03.github.io/Facebook-Login-Page-Project/)
+- **HTML**: building a recognizable authentication layout using basic form elements.
+- **CSS**: recreating a real-world design with box shadows, spacing, and alignment.
+- **UI/UX**: using color and size to communicate primary vs secondary actions.
+- **Architecture**: keeping the clone maintainable by styling through IDs/classes with clear intent.
 
-## Contributors
+## Challenges Faced
 
-- [Mullai Venese](https://github.com/MullaiVenese03/)
+- **Alignment**: positioning two major sections (branding + login card) without a layout framework.
+- **Consistent spacing**: matching familiar “Facebook-like” paddings and sizes.
+- **Responsiveness**: maintaining usability across different screen widths.
 
-## License
+## How I Solved Them
 
-This project is licensed under the [🤍MullaiVenese](https://github.com/MullaiVenese03/).
+- Used **inline-block + float** positioning in CSS to place sections side-by-side.
+- Applied a **card shadow** and fixed sizing for the login box to keep it visually consistent.
+- Kept typography and spacing uniform via shared font settings and line-height.
+
+## Future Improvements
+
+- Refactor layout to flexbox/grid for easier responsiveness.
+- Add mobile breakpoints for a stacked layout.
+- Add basic client-side validation messages (still UI-only).
+
+## Installation
+
+```bash
+git clone https://github.com/MullaiVenese03/HTML-CSS-JS-Without-Logic.git
+cd "HTML-CSS-JS-Without-Logic/Facebook-Login-Page-Project"
+```
+
+Open `index.html` in your browser.
+
+## Author
+
+- Mullai Venese - [MullaiVenese03](https://github.com/MullaiVenese03/)
+- Repository: [HTML-CSS-JS-Without-Logic](https://github.com/MullaiVenese03/HTML-CSS-JS-Without-Logic)

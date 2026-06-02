@@ -1,84 +1,81 @@
-﻿# ✅ To-Do List App
+# To-Do List
 
-A simple and interactive To-Do List App that helps users manage daily tasks with ease. Built using vanilla HTML, CSS, and JavaScript.
+![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
 
-## 📖 About
+A simple to-do list app built with vanilla JavaScript that supports adding tasks (Enter or button), marking them complete, auto-removing completed items, and clearing the entire list.
 
-This is a beginner-friendly web application that allows users to:
+## Preview
 
-- Add tasks by clicking a button or pressing Enter.
-- Mark tasks as completed with a single click.
-- Automatically remove completed tasks after confirmation.
-- Clear all tasks with a reset button.
+![To-Do List Icon](Assets/Icons/list-check-solid.svg)
 
-It’s perfect for personal productivity and daily planning.
+## Live Demo
 
-## 🛠️ What I Built
+[To-Do List](https://mullaivenese03.github.io/HTML-CSS-JS-Without-Logic/To-Do-List/)
 
-This project includes:
+## Features
 
-- Interactive task management using JavaScript.
-- Task creation, reading, and deletion.
-- DOM manipulation and event handling.
-- Alerts and timed actions for better UX.
-- User-friendly Responsive Design for all the Devices.
+- **Add tasks** using the Enter key or the add button.
+- **Instant DOM rendering**: tasks appear immediately as list items.
+- **Complete on click**: clicking a task strikes it through, shows a completion alert, then removes it.
+- **Clear all tasks** with one button.
+- **Responsive layout** using CSS grid + media queries for different screen sizes.
 
-## 📚 Lessons Learned
-
-While building this project, I learned:
-
-- How to dynamically create and remove DOM elements.
-- The importance of clean UI/UX in productivity apps.
-- How to handle user input and browser events.
-- Managing arrays and conditions in real-time interaction.
-
-## 🔗 Demo
-
-[LIVE](https://mullaivenese03.github.io/To-Do-List/)
-
-## 🚀 Getting Started
-
-To run the project locally:
-
-1. Clone the repository:
-
-```bash
-    git clone https://github.com/your-username/to-do-list-app.git
-```
-
-2. Navigate to the project folder:
-
-```bash
-    cd to-do-list-app
-```
-
-3. Open `index.html` in your browser.
-
-> No installations or setups required. Just open and go!
-
-## 💻 Tech Stack Used
+## Technologies Used
 
 - HTML5
 - CSS3
-- JavaScript (ES6)
+- JavaScript
 
-## 💡 Ideas for Improvement
+## Project Structure
 
-- Add local storage to save tasks between sessions.
-- Add task priority tags (e.g., High, Medium, Low).
-- Add deadlines and reminder notifications.
-- Add light/dark theme toggle for better UI.
+```text
+To-Do-List/
+├─ index.html
+├─ style.css
+├─ script.js
+└─ Assets/
+   └─ Icons/
+```
 
-## 🤝 Contributors
+## What I Learned
 
-- [MullaiVenese](https://github.com/MullaiVenese03/)
+- **HTML**: building a minimal, form-like UI with accessible inputs and buttons.
+- **CSS**: creating a glassmorphism-style container and adapting the task grid across breakpoints.
+- **JavaScript**: event handling (click + keyboard), dynamic element creation, and timed behavior (`setTimeout`).
+- **UI/UX**: small feedback loops (strike-through + confirmation + auto-remove) to reinforce task completion.
+- **Architecture**: keeping the app lightweight by using DOM as the source of truth for the current task list.
 
-## License
+## Challenges Faced
 
-This project is licensed under the 🤍[MullaiVenese](https://github.com/MullaiVenese03/). 
+- **Keyboard handling**: reliably capturing Enter to create tasks.
+- **Task lifecycle**: updating styles, notifying the user, and removing items without glitches.
+- **Responsive list layout**: ensuring long tasks wrap well and the grid remains readable.
 
+## How I Solved Them
 
-# 🖼️ Visuals
+- **Enter-to-add**: listened for a `keydown` event and triggered the same add function as the button.
+- **Completion flow**: applied `textDecoration`, then removed the element after a short delay.
+- **Responsive CSS**: switched the grid from 3 columns → 2 → 1 using media queries and `word-break` rules.
 
-[](Assets/Demo/Picture-01.png)
-[](Assets/Demo/Picture-02.png)
+## Future Improvements
+
+- Save tasks to **Local Storage** so they persist after refresh.
+- Add “edit task” and “undo delete” actions.
+- Replace `alert()` with inline toast notifications.
+- Add task priorities and due dates.
+
+## Installation
+
+```bash
+git clone https://github.com/MullaiVenese03/HTML-CSS-JS-Without-Logic.git
+cd "HTML-CSS-JS-Without-Logic/To-Do-List"
+```
+
+Open `index.html` in your browser.
+
+## Author
+
+- Mullai Venese - [MullaiVenese03](https://github.com/MullaiVenese03/)
+- Repository: [HTML-CSS-JS-Without-Logic](https://github.com/MullaiVenese03/HTML-CSS-JS-Without-Logic)

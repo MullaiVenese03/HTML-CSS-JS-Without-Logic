@@ -1,45 +1,74 @@
-# **3D Marvel Image Slider!**
+# 3D Image Slider (Marvel)
 
-This project showcases a captivating 3D image slider featuring Marvel characters. The slider offers a visually stunning and interactive experience, allowing users to explore a collection of Marvel images in a unique and immersive way.
+![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff)
 
-## Features 🌟
+A CSS-driven **3D rotating image carousel** using `transform-style: preserve-3d`, perspective transforms, and keyframe animation for a continuous rotation effect.
 
-- **3D Effect:** Utilizes CSS3 transformations to create a compelling 3D perspective for the image slider.
-- **Smooth Animation:** Employs smooth animations to enhance the user experience and make the slider visually engaging.
-- **Marvel Images:** Features a curated collection of Marvel images, showcasing iconic characters and scenes.
-- **Responsive Design:** (Future Update) The slider will be optimized for various screen sizes and devices, ensuring a seamless experience across different platforms.
+## Preview
 
-## Demo
+No local screenshot/preview image was found in this folder (the UI can be viewed in the live demo).
 
-**Only view in Laptop or Desktop:** [Live Demo](https://mullaivenese03.github.io/3D-Image-Slider/)
+## Live Demo
 
-## Installation & Setup 🖥️
+[3D Image Slider](https://mullaivenese03.github.io/HTML-CSS-JS-Without-Logic/3D-Image-Slider/)
 
-1. Clone the Repository:
+## Features
 
-   ```bash
-   git clone https://github.com/your-username/3d-image-slider.git
-   ```
-   
-2. Open in a Code Editor:
-   Navigate to the project directory and open it in your preferred code editor.
+- **3D ring layout**: each slide is placed around a circle using a calculated `rotateY(...)` + `translateZ(...)`.
+- **Continuous rotation** using a `@keyframes` animation on the slider container.
+- **Large hero typography** with stroke effect using a pseudo-element (`h1::after` + `-webkit-text-stroke`).
+- **Model foreground layer** via a background image in CSS (for depth and composition).
 
 ## Technologies Used
 
-- HTML
-- CSS
-- JavaScript (for future animations or interactions)
+- HTML5
+- CSS3 (3D transforms, keyframes, pseudo-elements)
 
-## Future Enhancements 🚀
+## Project Structure
 
-- **Responsive Design:** Implement responsive design to ensure the slider adapts to different screen sizes and devices.
-- **Additional Features:** Explore adding features like image captions, zooming, or social sharing.
-- **Performance Optimization:** Optimize the code for better performance, especially on mobile devices.
+```text
+3D-Image-Slider/
+├─ index.html
+├─ style.css
+└─ README.md
+```
 
-## Contributors
+## What I Learned
 
-- [MullaiVenese](https://github.com/MullaiVenese03/)
+- **HTML**: structuring repeated slide items and using CSS variables for configuration.
+- **CSS**: building 3D scenes with perspective, `preserve-3d`, and transform composition.
+- **UI/UX**: using motion carefully to create an immersive effect without needing JavaScript.
+- **Architecture**: controlling behavior via CSS custom properties (`--quantity`, `--position`) for scalable layout rules.
 
-## License
+## Challenges Faced
 
-This project is licensed under the 🤍[MullaiVenese](https://github.com/MullaiVenese03/).
+- **3D positioning math**: distributing items evenly in a circle and keeping them facing the viewer.
+- **Layering + readability**: balancing the rotating slider with big typography and a foreground model.
+- **Asset management**: ensuring all referenced local image assets exist and load correctly on deploy.
+
+## How I Solved Them
+
+- **Even distribution**: used `rotateY(calc((var(--position) - 1) * (360 / var(--quantity))*1deg))`.
+- **Depth**: pushed slides outward using `translateZ(500px)` and controlled camera with perspective.
+- **Layering**: set z-index for slider/content and used a pseudo-element stroke for the headline.
+
+## Future Improvements
+
+- Add responsive tuning for smaller screens (scale, translateZ, and typography).
+- Add hover-to-pause and reduced-motion support for accessibility.
+- Add captions and navigation controls (optional JS).
+
+## Installation
+
+```bash
+git clone https://github.com/MullaiVenese03/HTML-CSS-JS-Without-Logic.git
+cd "HTML-CSS-JS-Without-Logic/3D-Image-Slider"
+```
+
+Open `index.html` in your browser.
+
+## Author
+
+- Mullai Venese - [MullaiVenese03](https://github.com/MullaiVenese03/)
+- Repository: [HTML-CSS-JS-Without-Logic](https://github.com/MullaiVenese03/HTML-CSS-JS-Without-Logic)

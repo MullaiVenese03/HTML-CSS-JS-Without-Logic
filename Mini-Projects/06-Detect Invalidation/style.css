@@ -1,0 +1,59 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: black;
+  border-radius: 20px;
+  padding: 80px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: Arial;
+}
+
+input {
+  width: 500px;
+  height: 40px;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: white solid 1px;
+}
+
+input::placeholder {
+  font-size: 15px;
+  color: black;
+}
+
+input:invalid {
+  border: red solid 2px;
+  animation: shakeAnimation 0.2s ease-in-out infinite;
+}
+
+input:valid {
+  border: rgb(0, 255, 128) solid 2px;
+}
+
+@keyframes shakeAnimation {
+  0% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}

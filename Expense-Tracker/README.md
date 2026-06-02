@@ -1,82 +1,87 @@
-﻿# 💰 Expense Tracker
+# Expense Tracker
 
-A simple, responsive, and interactive Expense Tracker web app to manage your income, expenses, and balance effectively - all in one place.
+![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
 
-## 📖 About
+A responsive expense tracker that lets you add **Budget** and **Expense** transactions, computes the balance instantly, and renders entries into a table with delete actions.
 
-The **Expense Tracker** allows users to:
+## Preview
 
-- Record income and expense transactions.
-- Track real-time balance updates.
-- View all transactions in a tabular format.
-- Add and delete entries easily.
-- Get a color-coded balance (green for positive, red for negative).
+![Expense Tracker Preview](Preview_Image-1.png)
 
-Ideal for personal finance management and budgeting practice.
+## Live Demo
 
-## 🛠️ What I Built
+[Expense Tracker](https://mullaivenese03.github.io/HTML-CSS-JS-Without-Logic/Expense-Tracker/)
 
-- A real-time **balance calculator**.
-- **Add and Delete** transaction functionality.
-- **Transaction type selection** (Income/Budget or Expense).
-- **Date and description input** for proper bookkeeping.
-- **Responsive design** for both desktop and mobile users.
-- All built using **vanilla JavaScript**, no external libraries!
+## Features
 
-## 📚 Lessons Learned
+- **Add transactions** with date, amount, description, and type (Budget/Expense).
+- **Client-side validation** for required inputs before creating a transaction.
+- **Real-time balance** updates (budget adds, expense subtracts).
+- **Color-coded balance**: green for positive, red when negative.
+- **Transaction table rendering** using dynamic `<tr>` creation.
+- **Delete transaction** by removing the row from the table.
 
-While building this project, I learned:
+## Technologies Used
 
-- How to structure form inputs and manage user data via DOM.
-- Better understanding of state management using variables (for balance).
-- Implementing conditional logic with radio buttons.
-- Practiced responsive web design and dynamic DOM manipulation.
-- Importance of clean, modular code and validation for user experience.
+- HTML5
+- CSS3
+- JavaScript (DOM manipulation + events)
 
-## 🔗 Demo
+## Project Structure
 
-[LIVE](https://mullaivenese03.github.io/Expense-Tracker/)
+```text
+Expense-Tracker/
+├─ index.html
+├─ style.css
+├─ script.js
+├─ Assets/
+│  ├─ Icons/
+│  └─ Images/
+└─ Preview_Image-*.png
+```
 
-## 🚀 Getting Started
+## What I Learned
 
-To run the project locally:
+- **HTML**: designing form-like inputs (date/number/text/radio) that map cleanly to app state.
+- **CSS**: building a glassy UI using `backdrop-filter`, responsive widths, and table styling.
+- **JavaScript**: input validation, dynamic row creation, simple state management with variables, and event-driven UI updates.
+- **UI/UX**: using visual feedback (balance color) to make status obvious instantly.
+- **Architecture**: separating display logic (DOM) from state updates (balance variable + computed rules).
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/MullaiVenese03/Expense-Tracker.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd expense-tracker
-   ```
-3. Open `index.html` in your browser.
+## Challenges Faced
 
-> No installations required - it’s a static web app!
+- **Validation edge cases**: ensuring the app doesn’t create partial/invalid transactions.
+- **Keeping balance correct**: applying the right math based on selected radio button type.
+- **Delete behavior**: removing the right entry without breaking the rest of the table.
+- **Responsive tables**: maintaining readability on smaller screens.
 
-## 💻 Tech Stack Used
+## How I Solved Them
 
-- **HTML5** - Structure and layout
-- **CSS3** - Styling and responsiveness
-- **JavaScript (ES6)** - Dynamic behavior and interactivity
+- **Validation**: checked empty inputs + radio selection before proceeding; otherwise blocked with `alert`.
+- **Type handling**: derived a `radioBtn` label and updated balance based on `expenseRadio.checked`.
+- **Delete**: attached an inline delete handler that removes the row via `event.target.parentNode.remove()`.
+- **Responsive UI**: used media queries to reduce font size and adjust layout for narrow widths.
 
-## 💡 Ideas for Improvement
+## Future Improvements
 
-- Store transactions in **local storage** so data isn’t lost on refresh.
-- Add **filters** for viewing only income or expenses.
-- Display **total income and total expenses** separately.
-- Add **categories** for transactions (e.g., Food, Travel, Rent).
-- Implement **CSV export** or chart visualizations for analytics.
+- Persist transactions using **Local Storage** (restore on refresh).
+- Add summary cards for **Total Budget** and **Total Expense**.
+- Add categories + filtering (e.g., Food, Travel, Rent).
+- Replace `alert()` with inline validation messages and better UX.
+- Add charts (monthly spend breakdown) using a small chart library.
 
-## 🤝 Contributors
+## Installation
 
-- [MullaiVenese](https://github.com/MullaiVenese03/)
+```bash
+git clone https://github.com/MullaiVenese03/HTML-CSS-JS-Without-Logic.git
+cd "HTML-CSS-JS-Without-Logic/Expense-Tracker"
+```
 
-## License
+Open `index.html` in your browser.
 
-This project is licensed under the 🤍[MullaiVenese](https://github.com/MullaiVenese03/).
+## Author
 
-# 🖼️ Visuals
-
-[](Assets/Demo/Picture-01.png)
-[](Assets/Demo/Picture-02.png)
-[](Assets/Demo/Picture-03.png)
+- Mullai Venese - [MullaiVenese03](https://github.com/MullaiVenese03/)
+- Repository: [HTML-CSS-JS-Without-Logic](https://github.com/MullaiVenese03/HTML-CSS-JS-Without-Logic)
